@@ -16,10 +16,15 @@ header {
     top: 0;
 }
 
-/* TODO: fonts/styling for h1, h2, h3, p */
+/* fonts/styling for h1, h2, h3, p */
 
 h1, h2, h3, p {
     text-align: center;
+    color: darkcyan
+}
+/* TODO: BONUS: center this button?? UGH lol */
+button {
+    justify-content: center;
 }
 
  /* TODO: vert and horiz centering for MAIN element */

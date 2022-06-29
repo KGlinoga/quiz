@@ -14,12 +14,13 @@
         <a href="#high-scores">View High Scores</a>
 
         <!-- timer display in top right corner, probably position fixed in CSS, so we need an ID -->
-        <p id="timer">Timer!</p>
+        <p id="timer">Timer: 0</p>
 
     </header>
     <main>
         <!-- for the Landing Page -->
-
+        
+        <section class="landing-page">
             <!-- need a title, Coding Quiz Challenge, probably h1, centered on page -->
             <h1>Welcome to the Coding Quiz Challenge!</h1>
 
@@ -29,10 +30,12 @@
 
             <!-- TODO: button to start game! Should also start the timer -->
                  <!--maybe on button click, it clears the Quiz Challenge title, the <p> quiz explaination copy, and the Start Quiz button, and THEN displays the Question Page content below    -->
-
-
+            <button>Start!</button>        
+        </section>   
+        
         <!--for the Question Pages (5x)  -->
-
+        
+        <section class="question-pages">
              <!-- TODO: header stays the same -->
 
              <!-- TODO: h2 Question Copy -->
@@ -41,8 +44,12 @@
                 - TODO: final button push clears Question Page content and displays Finished Quiz page content-->
 
              <!-- TODO: h3 to display the correctness or incorrectness of the previous answer -->
-
+        
+            </section>
+        
         <!-- for the Finished Quiz Page -->
+
+        <section class="finished-quiz-page">
 
             <!-- TODO: h2 All Done! message -->
 
@@ -50,8 +57,11 @@
 
             <!-- TODO: Maybe a div?? but need a p for Enter your initials copy, and a text form for users to input their initials.
                 TODO: Button to submit and store in local storage(JS) -->
+            </section>
 
         <!-- for the High Scores Page -->
+
+        <section class="high-scores-page" id="high-scores">    
 
             <!-- TODO: no header necessary -->
             <!-- TODO: the "View High Scores" link will come here -->
@@ -63,7 +73,9 @@
             <!-- TODO: button to "go back" I think this restarts the game  -->
 
             <!-- TODO: button to Clear High Scores, like a hater lololol.  -->
-    </main>
+            </section>
+
+        </main>
 
 
     <script src="./assets/script.js"></script>
