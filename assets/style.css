@@ -4,6 +4,18 @@ body {
 
 /* KEEP IT EXTREMELY BASIC */
 
+/* TODO: header section formatting, mostly keeping timer in the top right corner. */
+header {
+    position;
+}
+
+#timer {
+    background-color: aqua;
+    position:fixed;
+    right: 0;
+    top: 0;
+}
+
 /* TODO: fonts/styling for h1, h2, h3, p */
 
  /* TODO: vert and horiz centering for MAIN element */

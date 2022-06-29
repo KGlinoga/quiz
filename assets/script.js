@@ -6,6 +6,8 @@ console.log("hello there!")
 
 // TODO: Answer buttons: 4 each, 1 correct, that saves & displays Correct! on next page, 3 incorrect that save & display Incorrect! on next page. Every button clears Main content and loads the next question's Main content, until the LAST question, which leads to the Finshed Quiz Page.
 
+//****The game is over when *all questions are answered OR the timer reaches 0 */
+
 // for the FINISHED QUIZ PAGE:
 // TODO: Display h2 All Done
 // TODO: Display p Your final Score is __. and fills in the blank
