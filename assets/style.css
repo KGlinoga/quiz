@@ -4,7 +4,7 @@ body {
 
 /* KEEP IT EXTREMELY BASIC */
 
-/* TODO: header section formatting, mostly keeping timer in the top right corner. */
+/*  header section formatting, mostly keeping timer in the top right corner. */
 header {
     position;
 }
@@ -17,6 +17,10 @@ header {
 }
 
 /* TODO: fonts/styling for h1, h2, h3, p */
+
+h1, h2, h3, p {
+    text-align: center;
+}
 
  /* TODO: vert and horiz centering for MAIN element */
 
