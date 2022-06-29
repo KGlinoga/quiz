@@ -1,8 +1,13 @@
 console.log("hello there!")
 
-// TODO: Timer in top left corner that 1. starts when the Start Quiz button is clicked 2. counts down from like 75 seconds 3. drops 10 sec for every wrong answer. Logs a LOSS when it reaches 0, if the quiz is still going.
+// readme: ACceptance Crit
+// pseudo code, global scope first, then functions, and so on. 
+// once you get a feature to work, stop, think if you can make it BETTER.  Might be more efficient. don't get too far ahead of yourself - don't get ot step 5 and realize step 2 was a mistake. 
 
-// TODO: Start Quiz button that 1. clears Landing Page Main content 2. Displays Question Pages Main content
+// TODO: Timer in top left corner that 1. starts when the Start Quiz button is clicked 2. counts down from like 75 seconds 3. drops 10 sec for every wrong answer. Logs a LOSS when it reaches 0, if the quiz is still going.
+    // web API folder
+
+// TODO: Start Quiz button that changes both the .main-text section display and the .quiz-display to the next page. 
 
 // TODO: Answer buttons: 4 each, 1 correct, that saves & displays Correct! on next page, 3 incorrect that save & display Incorrect! on next page. Every button clears Main content and loads the next question's Main content, until the LAST question, which leads to the Finshed Quiz Page.
 
