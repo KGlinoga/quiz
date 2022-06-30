@@ -5,7 +5,13 @@ console.log("hello there!")
 // once you get a feature to work, stop, think if you can make it BETTER.  Might be more efficient. don't get too far ahead of yourself - don't get ot step 5 and realize step 2 was a mistake. 
 
 // TODO: Start Quiz button that changes both the .main-text section display and the .quiz-display to the next page. AND starts the Timer
+var startBtn = document.querySelector("#startQuiz")
 
+startBtn.addEventListener("click", function(){
+    if (startBtn){
+        quizTime();
+    }
+})
 
 
 // TODO: Timer in top left corner that 1. starts when the Start Quiz button is clicked 2. counts down from like 75 seconds 3. drops 10 sec for every wrong answer. Logs a LOSS when it reaches 0, if the quiz is still going.
