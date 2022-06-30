@@ -31,7 +31,7 @@ function quizTime() {
         if(secondsLeft === 0) {
             clearInterval(timerInterval);
             alert("Time's Up!");
-            //change the HTML Quiz Section back to Landing Page status.
+            //change the HTML Quiz Section back to Landing Page status. maybe onclick from alert??
         }
     }, 100); 
 }
@@ -39,10 +39,12 @@ function quizTime() {
 
 // TODO: Answer buttons: 4 each, 1 correct, that saves & displays Correct! on next page, 3 incorrect that save & display Incorrect! on next page. Every button clears Main content and loads the next question's Main content, until the LAST question, which leads to the Finshed Quiz Page.
 
-//this code changes the landing page title to the quiz questions
+//this code changes the landing page title to the quiz questions - now we need arrays of strings containing the questions and another with the answers.  
+
+var question = ["1.This is a coding question?","2.This is also a coding question?"]
 function startQuiz() {
-    var question = "1. This is a coding question?";
-    document.getElementById("titleQuestion").innerHTML = question;
+  
+    document.getElementById("titleQuestion").innerHTML = question[1];
 }
 
 
