@@ -10,13 +10,13 @@ var startBtn = document.querySelector("#start-quiz")
 startBtn.addEventListener("click", function(){
     if (startBtn){
         quizTime();
-        // startQuiz();    
+        startQuiz();    
     }
 })
 
 
 // TODO: Timer in top left corner that 1. starts when the Start Quiz button is clicked 2. counts down from like 75 seconds 3. drops 10 sec for every wrong answer. Logs a LOSS when it reaches 0, if the quiz is still going.
-    // web API folder
+// web API folder
 var timerEl = document.querySelector("#timer");
 var mainEl = document.getElementById("main");
 
@@ -27,7 +27,7 @@ function quizTime() {
         secondsLeft--;
         timerEl.textContent = secondsLeft;
         console.log(secondsLeft)
-
+        
         if(secondsLeft === 0) {
             clearInterval(timerInterval);
             alert("Time's Up!");
@@ -38,8 +38,13 @@ function quizTime() {
 
 
 // TODO: Answer buttons: 4 each, 1 correct, that saves & displays Correct! on next page, 3 incorrect that save & display Incorrect! on next page. Every button clears Main content and loads the next question's Main content, until the LAST question, which leads to the Finshed Quiz Page.
-var question = "1. This is a coding question?";
-document.getElementById("titleQuestion").innerHTML = question;
+
+//this code changes the landing page title to the quiz questions
+function startQuiz() {
+    var question = "1. This is a coding question?";
+    document.getElementById("titleQuestion").innerHTML = question;
+}
+
 
 
 //****The game is over when *all questions are answered OR the timer reaches 0 */
