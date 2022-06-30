@@ -22,6 +22,7 @@ var timerEl = document.querySelector("#timer");
 var mainEl = document.getElementById("main");
 
 var secondsLeft = 10;
+var timeUp 
 
 function quizTime() {
     var timerInterval = setInterval(function(){
@@ -33,6 +34,10 @@ function quizTime() {
             alert("Time's Up!");
             //change the HTML Quiz Section back to Landing Page status. maybe onclick from alert??
         }
+        if (secondsLeft < 1){
+           clearTimeout ();     
+        }
+        
     }, 1000); 
 }
 
@@ -53,24 +58,30 @@ function questionPages () {
 
 //this code changes the landing page title to the quiz questions - now we need arrays of strings containing the questions and another with the answers.  
 
-var question = [
-    "1.&lt;main&gt;, &lt;header&gt;, and &lt;section&gt; are examples of:",
+// var questionAnswers = [
+//     "1.&lt;main&gt;, &lt;header&gt;, and &lt;section&gt; are examples of:",
    
-    "2.True or False: Code within the &lt;head&gt; tag does not display in the browser window.", 
+//     "2.True or False: Code within the &lt;head&gt; tag does not display in the browser window.", 
 
-    "3. An image tag in HTML needs:", 
+//     "3. An image tag in HTML needs:", 
 
-    "4. When should you commit to GitHub?", 
+//     "4. When should you commit to GitHub?", 
 
-    "5. If HTML is the structure of a house, and JavaScript is like the creative/interactive homeowner, what is the CSS?"];
+//     "5. If HTML is the structure of a house, and JavaScript is like the creative/interactive homeowner, what is the CSS?"];
 
-var answers = [
+const questionOne = {
+    question: "1.&lt;main&gt;, &lt;header&gt;, and &lt;section&gt; are examples of:",
+    answerCorrect: "semantic HTML tags",
+    answerIncorrect: "CSS tags", "sandwiches", "C++ stuff"
+};
+
+// var answers = [
     //this will be an array of the different buttons for answers - each element will be a set of 4 answer buttons, 1 correct/3 incorrect.
-]
+// ]
 
 function startQuiz() {
     for (let i = 0; i < question.length; i++){
-    document.getElementById("titleQuestion"). innerHTML = question[i];
+    document.getElementById("titleQuestion"). innerHTML = questionOne[i];
     }
     //another for loop to cycle through the answers array via .innerHTML to change to buttons
 }
