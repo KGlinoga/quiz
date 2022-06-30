@@ -42,11 +42,24 @@ function quizTime() {
 
 //this code changes the landing page title to the quiz questions - now we need arrays of strings containing the questions and another with the answers.  
 
-var question = ["1.&lt;main&gt;, &lt;header&gt;, and &lt;section&gt; are examples of:","2.True or False: Code within the &lt;head&gt; tag does not display in the browser window.", "3. An image tag in HTML needs:", "4. When should you commit to GitHub?", "5. If HTML is the structure of a house, and JavaScript is like the creative/interactive homeowner, what is the CSS?"]
+var question = [
+    "1.&lt;main&gt;, &lt;header&gt;, and &lt;section&gt; are examples of:",
+   
+    "2.True or False: Code within the &lt;head&gt; tag does not display in the browser window.", 
+
+    "3. An image tag in HTML needs:", 
+
+    "4. When should you commit to GitHub?", 
+
+    "5. If HTML is the structure of a house, and JavaScript is like the creative/interactive homeowner, what is the CSS?"];
+
+var answers = [
+    //this will be an array of the different buttons for answers - each element will be a set of 4 answer buttons, 1 correct/3 incorrect.
+]
 
 function startQuiz() {
     for (var i = 0; i < question.length; i++){
-    document.getElementById("titleQuestion").innerHTML = question[i];
+    document.getElementById("titleQuestion").textContent = question[i];
     }
 }
 
