@@ -34,55 +34,55 @@ function quizTime() {
             alert("Time's Up!");
             //change the HTML Quiz Section back to Landing Page status. maybe onclick from alert??
         }
-        if (secondsLeft < 1){
-           clearTimeout ();     
-        }
-        
     }, 1000); 
 }
 
 
 // TODO: Answer buttons: 4 each, 1 correct, that saves & displays Correct! on next page, 3 incorrect that save & display Incorrect! on next page. Every button clears Main content and loads the next question's Main content, until the LAST question, which leads to the Finshed Quiz Page.
 
-var answerOne = "CSS tags"
+// var answerOne = "CSS tags"
 
 function questionPages () {
     // document.getElementById("start-quiz").innerHTML = ;
     var answerBtn = document.createElement();
 
-    answerBtn.textContent = "Q1 Answer 1 copy." + answerOne;
+    answerBtn.textContent = "Q1 Answer 1 copy." + questionAnswers;
 
-    document.body.appendChild(answerBtn);
+    document.section.appendChild(answerBtn);
 }
 
 
 //this code changes the landing page title to the quiz questions - now we need arrays of strings containing the questions and another with the answers.  
 
-// var questionAnswers = [
-//     "1.&lt;main&gt;, &lt;header&gt;, and &lt;section&gt; are examples of:",
+var questionAnswers = [
+    "1.&lt;main&gt;, &lt;header&gt;, and &lt;section&gt; are examples of:",
    
-//     "2.True or False: Code within the &lt;head&gt; tag does not display in the browser window.", 
+    "2.True or False: Code within the &lt;head&gt; tag does not display in the browser window.", 
 
-//     "3. An image tag in HTML needs:", 
+    "3. An image tag in HTML needs:", 
 
-//     "4. When should you commit to GitHub?", 
+    "4. When should you commit to GitHub?", 
 
-//     "5. If HTML is the structure of a house, and JavaScript is like the creative/interactive homeowner, what is the CSS?"];
+    "5. If HTML is the structure of a house, and JavaScript is like the creative/interactive homeowner, what is the CSS?"];
 
-const questionOne = {
-    question: "1.&lt;main&gt;, &lt;header&gt;, and &lt;section&gt; are examples of:",
-    answerCorrect: "semantic HTML tags",
-    answerIncorrect: "CSS tags", "sandwiches", "C++ stuff"
-};
+// const questionOne = {
+//     question: "1.&lt;main&gt;, &lt;header&gt;, and &lt;section&gt; are examples of:",
+//     answerCorrect: "semantic HTML tags",
+//     answerIncorrect: "CSS tags", "sandwiches", "C++ stuff"
+// };
 
-// var answers = [
-    //this will be an array of the different buttons for answers - each element will be a set of 4 answer buttons, 1 correct/3 incorrect.
-// ]
+var answers = [
+    // this will be an array of the different buttons for answers - each element will be a set of 4 answer buttons, 1 correct/3 incorrect.
+    "a. CSS tags<br> b. sandwiches<br> c. Semantic HTML tags<br> d. C++ stuff"
+]
 
 function startQuiz() {
-    for (let i = 0; i < question.length; i++){
-    document.getElementById("titleQuestion"). innerHTML = questionOne[i];
+    for (let i = 0; i < questionAnswers.length; i++){
+        document.getElementById("titleQuestion").innerHTML = questionAnswers[i];
     }
+    for (let i = 0; i < answers.length; i++){
+        document.getElementById("quiz-display").innerHTML = answers[i];
+        }
     //another for loop to cycle through the answers array via .innerHTML to change to buttons
 }
 
