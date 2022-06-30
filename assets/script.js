@@ -5,11 +5,12 @@ console.log("hello there!")
 // once you get a feature to work, stop, think if you can make it BETTER.  Might be more efficient. don't get too far ahead of yourself - don't get ot step 5 and realize step 2 was a mistake. 
 
 // TODO: Start Quiz button that changes both the .main-text section display and the .quiz-display to the next page. AND starts the Timer
-var startBtn = document.querySelector("#startQuiz")
+var startBtn = document.querySelector("#start-quiz")
 
 startBtn.addEventListener("click", function(){
     if (startBtn){
         quizTime();
+        // startQuiz();    
     }
 })
 
@@ -19,7 +20,7 @@ startBtn.addEventListener("click", function(){
 var timerEl = document.querySelector("#timer");
 var mainEl = document.getElementById("main");
 
-var secondsLeft = 100;
+var secondsLeft = 10;
 
 function quizTime() {
     var timerInterval = setInterval(function(){
@@ -29,13 +30,17 @@ function quizTime() {
 
         if(secondsLeft === 0) {
             clearInterval(timerInterval);
-            sendMessage("Time's Up!")
+            alert("Time's Up!");
+            //change the HTML Quiz Section back to Landing Page status.
         }
-    }, 1000); 
+    }, 100); 
 }
 
 
 // TODO: Answer buttons: 4 each, 1 correct, that saves & displays Correct! on next page, 3 incorrect that save & display Incorrect! on next page. Every button clears Main content and loads the next question's Main content, until the LAST question, which leads to the Finshed Quiz Page.
+var question = "1. This is a coding question?";
+document.getElementById("titleQuestion").innerHTML = question;
+
 
 //****The game is over when *all questions are answered OR the timer reaches 0 */
 
