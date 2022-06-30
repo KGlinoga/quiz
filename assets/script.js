@@ -8,10 +8,10 @@ console.log("hello there!")
 var startBtn = document.querySelector("#start-quiz")
 
 startBtn.addEventListener("click", function(){
-    if (startBtn){
+
         quizTime();
-        startQuiz();    
-    }
+        startQuiz();  
+        // correctAnswer();  
 })
 
 
@@ -26,26 +26,28 @@ function quizTime() {
     var timerInterval = setInterval(function(){
         secondsLeft--;
         timerEl.textContent = secondsLeft;
-        console.log(secondsLeft)
         
         if(secondsLeft === 0) {
             clearInterval(timerInterval);
             alert("Time's Up!");
             //change the HTML Quiz Section back to Landing Page status. maybe onclick from alert??
         }
-    }, 100); 
+    }, 1000); 
 }
 
 
 // TODO: Answer buttons: 4 each, 1 correct, that saves & displays Correct! on next page, 3 incorrect that save & display Incorrect! on next page. Every button clears Main content and loads the next question's Main content, until the LAST question, which leads to the Finshed Quiz Page.
+
+
 
 //this code changes the landing page title to the quiz questions - now we need arrays of strings containing the questions and another with the answers.  
 
 var question = ["1.&lt;main&gt;, &lt;header&gt;, and &lt;section&gt; are examples of:","2.True or False: Code within the &lt;head&gt; tag does not display in the browser window.", "3. An image tag in HTML needs:", "4. When should you commit to GitHub?", "5. If HTML is the structure of a house, and JavaScript is like the creative/interactive homeowner, what is the CSS?"]
 
 function startQuiz() {
-  
-    document.getElementById("titleQuestion").innerHTML = question[1];
+    for (var i = 0; i < question.length; i++){
+    document.getElementById("titleQuestion").innerHTML = question[i];
+    }
 }
 
 
