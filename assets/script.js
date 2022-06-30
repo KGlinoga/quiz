@@ -11,6 +11,7 @@ startBtn.addEventListener("click", function(){
 
         quizTime();
         startQuiz();  
+        questionPages();
         // correctAnswer();  
 })
 
@@ -38,6 +39,16 @@ function quizTime() {
 
 // TODO: Answer buttons: 4 each, 1 correct, that saves & displays Correct! on next page, 3 incorrect that save & display Incorrect! on next page. Every button clears Main content and loads the next question's Main content, until the LAST question, which leads to the Finshed Quiz Page.
 
+var answerOne = "CSS tags"
+
+function questionPages () {
+    // document.getElementById("start-quiz").innerHTML = ;
+    var answerBtn = document.createElement();
+
+    answerBtn.textContent = "Q1 Answer 1 copy." + answerOne;
+
+    document.body.appendChild(answerBtn);
+}
 
 
 //this code changes the landing page title to the quiz questions - now we need arrays of strings containing the questions and another with the answers.  
@@ -58,9 +69,10 @@ var answers = [
 ]
 
 function startQuiz() {
-    for (var i = 0; i < question.length; i++){
-    document.getElementById("titleQuestion").textContent = question[i];
+    for (let i = 0; i < question.length; i++){
+    document.getElementById("titleQuestion"). innerHTML = question[i];
     }
+    //another for loop to cycle through the answers array via .innerHTML to change to buttons
 }
 
 
