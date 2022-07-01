@@ -89,14 +89,26 @@ function startQuiz() {
 }
 
 
-const qAndAs = {
-    "qs":"An image tag in HTML needs:",
-    "answerA":"To get a life",
-    "answerB":"An src and alt attributes",
-    "answerC":"A friend",
-    "answerD":"A binary search"
-}
+const qAndAs = [
+    {"qs":"1.&lt;main&gt;, &lt;header&gt;, and &lt;section&gt; are examples of:",
+    "answerA":"a. CSS tags",
+    "answerB":"b. sandwiches",
+    "answerC":"c. Semantic HTML tags",
+    "answerD":"d. C++ stuff"},
 
+    {"qs":"When should you commit to GitHub?",
+    "answerA":"a. Only at the end of your entire project.",
+    "answerB":"b. Only at the beginning of your entire project.",
+    "answerC":"c. Early and often.",
+    "answerD":"d. Only on Summer Solstice"},
+
+    {"qs":"An image tag in HTML needs:",
+    "answerA":"a. To get a life",
+    "answerB":"b. An src and alt attributes",
+    "answerC":"c. A friend",
+    "answerD":"d. A binary search"}
+]
+console.log(qAndAs.answerA)
 
 
 //****The game is over when *all questions are answered OR the timer reaches 0 */
