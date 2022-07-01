@@ -73,7 +73,9 @@ var questionAnswers = [
 
 var answers = [
     // this will be an array of the different buttons for answers - each element will be a set of 4 answer buttons, 1 correct/3 incorrect.
-    "a. CSS tags<br> b. sandwiches<br> c. Semantic HTML tags<br> d. C++ stuff"
+    "a. CSS tags<br> b. sandwiches<br> c. Semantic HTML tags<br> d. C++ stuff", 
+    "a. True (correct)<br> b. False<br> c. Sometimes<br> d. Depends on the window", 
+    "a. The styling and decor<br> b. The family dog<br> c. The nosey neighbor<br> d. The basement."
 ]
 
 function startQuiz() {
@@ -84,6 +86,15 @@ function startQuiz() {
         document.getElementById("quiz-display").innerHTML = answers[i];
         }
     //another for loop to cycle through the answers array via .innerHTML to change to buttons
+}
+
+
+const qAndAs = {
+    "qs":"An image tag in HTML needs:",
+    "answerA":"To get a life",
+    "answerB":"An src and alt attributes",
+    "answerC":"A friend",
+    "answerD":"A binary search"
 }
 
 

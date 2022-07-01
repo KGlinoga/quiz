@@ -26,6 +26,10 @@ h1, h2, h3, p {
 /* TODO: BONUS: center this button?? UGH lol */
 button {
     justify-content: center;
+} 
+
+#quiz-display {
+    color: darkcyan;
 }
 
  /* TODO: vert and horiz centering for MAIN element */
