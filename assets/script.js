@@ -1,5 +1,3 @@
-console.log("hello there!")
-
 // readme: ACceptance Crit
 // pseudo code, global scope first, then functions, and so on. 
 // once you get a feature to work, stop, think if you can make it BETTER.  Might be more efficient. don't get too far ahead of yourself - don't get ot step 5 and realize step 2 was a mistake. 
@@ -11,7 +9,7 @@ startBtn.addEventListener("click", function(){
 
         quizTime();
         startQuiz();  
-        questionPages();
+        // questionPages();
         // correctAnswer();  
 })
 
@@ -21,7 +19,7 @@ startBtn.addEventListener("click", function(){
 var timerEl = document.querySelector("#timer");
 var mainEl = document.getElementById("main");
 
-var secondsLeft = 10;
+var secondsLeft = 100;
 var timeUp 
 
 function quizTime() {
@@ -40,16 +38,14 @@ function quizTime() {
 
 // TODO: Answer buttons: 4 each, 1 correct, that saves & displays Correct! on next page, 3 incorrect that save & display Incorrect! on next page. Every button clears Main content and loads the next question's Main content, until the LAST question, which leads to the Finshed Quiz Page.
 
-// var answerOne = "CSS tags"
+// function questionPages () {
+//     // document.getElementById("start-quiz").innerHTML = ;
+//     var answerBtn = document.createElement();
 
-function questionPages () {
-    // document.getElementById("start-quiz").innerHTML = ;
-    var answerBtn = document.createElement();
+//     answerBtn.textContent = "Q1 Answer 1 copy." + questionAnswers;
 
-    answerBtn.textContent = "Q1 Answer 1 copy." + questionAnswers;
-
-    document.section.appendChild(answerBtn);
-}
+//     document.section.appendChild(answerBtn);
+// }
 
 
 //this code changes the landing page title to the quiz questions - now we need arrays of strings containing the questions and another with the answers.  
@@ -90,11 +86,11 @@ function startQuiz() {
 
 
 const qAndAs = [
-    {"qs":"1.&lt;main&gt;, &lt;header&gt;, and &lt;section&gt; are examples of:",
-    "answerA":"a. CSS tags",
-    "answerB":"b. sandwiches",
-    "answerC":"c. Semantic HTML tags",
-    "answerD":"d. C++ stuff"},
+    {qs:"1.&lt;main&gt;, &lt;header&gt;, and &lt;section&gt; are examples of:",
+    answerA:"a. CSS tags",
+    answerB:"b. sandwiches",
+    answerC:"c. Semantic HTML tags",
+    answerD:"d. C++ stuff"},
 
     {"qs":"When should you commit to GitHub?",
     "answerA":"a. Only at the end of your entire project.",
@@ -108,7 +104,7 @@ const qAndAs = [
     "answerC":"c. A friend",
     "answerD":"d. A binary search"}
 ]
-console.log(qAndAs.answerA)
+console.log(qAndAs)
 
 
 //****The game is over when *all questions are answered OR the timer reaches 0 */
